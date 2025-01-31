@@ -1,1 +1,12 @@
-123_
+#!/bin/bash
+
+# Source directory (current working directory)
+src_dir="$(pwd)"
+
+# Destination directory (parent of the current directory)
+dest_dir="$(dirname "$src_dir")"
+
+# Copy only newer or missing .html files
+cp -u "$src_dir"/*.html "$dest_dir"
+
+echo "HTML files copied successfully (if updated or missing)."
