@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -u "$src_dir"/*.html "$dest_dir"
+for file in *.html; do cp -u "$file" ..
