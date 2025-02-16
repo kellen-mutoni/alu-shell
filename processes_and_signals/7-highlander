@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Kills the 4-to_infinity_and_beyond process.
+
+pkill -f 4-to_infinity_and_beyond 
+root@d18ee4f87d76:/alu-shell/processes_and_signals# cat 7-highlander
+#!/usr/bin/env bash
+# Ths script displays "To infinity and beyond" indefinitely with
+#+ a sleep 2 in between each iteration.
+#   Displays "I am invincible!!!" in between each iteration.
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+  trap 'echo "I am invincible!!!"' SIGTERM 
+done
